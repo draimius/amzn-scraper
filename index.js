@@ -1,10 +1,11 @@
-const { response } = require('express');
 const express = require('express');
 const request = require('request-promise');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+const api_key = '2559ae74a7a87f4c8dc325d1f4dbf339';
+// 4c8dc325d1f4dbf33959ae74a7a87f
 const generateScraperUrl = () =>
   `http://api.scraperapi.com?api_key=${api_key}&autoparse=true`;
 
@@ -12,8 +13,7 @@ const generateScraperUrl = () =>
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('welcome to amazon working brub server');
-  console.log('working abruv');
+  res.send('welcome to amazon web scraper, use docs coming soon');
   res.broad;
 });
 
